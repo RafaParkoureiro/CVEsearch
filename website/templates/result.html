@@ -1,0 +1,250 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>CVE Search Results</title>
+</head>
+<body>
+<nav class="container-fluid">
+    <ul>
+        <li><strong>CVE Search Results</strong></li>
+    </ul>
+    <ul>
+        <li><a href="/">Basic Search</a></li>
+        <li><a href="/advanced_search">Advanced Search</a></li>
+    </ul>
+</nav>
+<main class="container">
+    <div class="grid">
+        <section>
+            <hgroup>
+                <h2>CVE Search Results</h2>
+                <h3>Check your CVE Search Results</h3>
+            </hgroup>
+            {% if df is not none and not df.empty %}
+            <div class="table-container">
+                <div class="table-row">
+                    {% for column in df.columns %}
+                        <div class="label">{{ column }}:</div>
+                        <div class="value">{{ df[column][0] }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+            <h3>Ask a Question:</h3>
+            <form id="questionForm" action="/ask_question" method="post">
+                <input type="hidden" name="cve_id" value="{{ df['id'][0] }}">
+                <input type="text" id="question" name="question" placeholder="Enter your question" aria-label="Question" required>
+                <button type="submit">Ask</button>
+            </form>
+            {% endif %}
+            {% if answer %}
+            <div class="answer">
+                <h3>Answer:</h3>
+                <p>{{ answer }}</p>
+            </div>
+            {% endif %}
+            {% if df is none or df.empty %}
+            <p>No CVE information available.</p>
+            {% endif %}
+        </section>
+    </div>
+</main>
+</body>
+</html> -->
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>CVE Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2, h3 {
+            text-align: center;
+        }
+        .table-container {
+            margin-bottom: 20px;
+        }
+        .table-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .label {
+            flex-basis: 30%;
+            font-weight: bold;
+        }
+        .value {
+            flex-basis: 65%;
+        }
+        #questionForm {
+            text-align: center;
+        }
+        #question {
+            width: 60%;
+            padding: 10px;
+            margin: 10px auto;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px auto;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .answer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<nav class="container-fluid">
+    <ul>
+        <li><strong>CVE Search Results</strong></li>
+    </ul>
+    <ul>
+        <li><a href="/">Basic Search</a></li>
+        <li><a href="/advanced_search">Advanced Search</a></li>
+    </ul>
+</nav>
+<main class="container">
+    <div class="grid">
+        <section>
+            <hgroup>
+                <h2>CVE Search Results</h2>
+                <h3>Check your CVE Search Results</h3>
+            </hgroup>
+            {% if df is not none and not df.empty %}
+            <div class="table-container">
+                <div class="table-row">
+                    {% for column in df.columns %}
+                        <div class="label">{{ column }}:</div>
+                        <div class="value">{{ df[column][0] }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+            <h3>Ask a Question:</h3>
+            <form id="questionForm" action="/ask_question" method="post">
+                <input type="hidden" name="cve_id" value="{{ df['id'][0] }}">
+                <input type="text" id="question" name="question" placeholder="Enter your question" aria-label="Question" required>
+                <button type="submit">Ask</button>
+            </form>
+            {% endif %}
+            {% if answer %}
+            <div class="answer">
+                <h3>Answer:</h3>
+                <p>{{ answer }}</p>
+            </div>
+            {% endif %}
+            {% if df is none or df.empty %}
+            <p>No CVE information available.</p>
+            {% endif %}
+        </section>
+    </div>
+</main>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>CVE Search Results</title>
+    <style>
+        /* Add any additional styles here */
+        .table-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .value {
+            margin-bottom: 10px;
+        }
+        #questionForm {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<nav class="container-fluid">
+    <ul>
+        <li><strong>CVE Search Results</strong></li>
+    </ul>
+    <ul>
+        <li><a href="/">Basic Search</a></li>
+        <li><a href="/advanced_search">Advanced Search</a></li>
+    </ul>
+</nav>
+<main class="container">
+    <div class="grid">
+        <section>
+            <hgroup>
+                <h2>CVE Search Results</h2>
+                <h3>Check your CVE Search Results</h3>
+            </hgroup>
+            {% if df is not none and not df.empty %}
+            <div class="table-container">
+                {% for column in df.columns %}
+                    <div class="label">{{ column }}:</div>
+                    <div class="value">{{ df[column][0] }}</div>
+                {% endfor %}
+            </div>
+            <h3>Ask a Question:</h3>
+            <form id="questionForm" action="/ask_question" method="post">
+                <input type="hidden" name="cve_id" value="{{ df['id'][0] }}">
+                <input type="text" id="question" name="question" placeholder="Enter your question" aria-label="Question" required>
+                <button type="submit">Ask</button>
+            </form>
+            {% endif %}
+            {% if answer %}
+            <div class="question">
+                <h3>Question:</h3>
+                <p>{{ question }}</p>
+            </div>
+            <div class="answer">
+                <h3>Answer:</h3>
+                <p>{{ answer }}</p>
+            </div>
+            {% endif %}
+            {% if df is none or df.empty %}
+            <p>No CVE information available.</p>
+            {% endif %}
+        </section>
+    </div>
+</main>
+</body>
+</html>
