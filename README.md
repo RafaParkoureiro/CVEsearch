@@ -25,6 +25,8 @@ pip install -r requirements.txt
 
 3. Run the app.py code to open the fron-end part of the program, where you can search per specific CVE-ID to have some general informations about that CVE and then you can ask questions about it (for instance, you can ask "When was the attack?", or "What was the score of that CVE?".
 
+4. We did a model to classify the model but we couldn't implement in the front-end on time, but it's there :)
+
 It's recommended to set up a new environment to ensure clean dependencies.
 
 ## Collaborators
