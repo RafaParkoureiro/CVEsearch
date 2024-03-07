@@ -3,3 +3,4 @@ nvdlib>=0.3.3
 openai>=0.6.0
 openpyxl>=3.0.8
 Flask>=2.0.2
+nltk>=3.6.5
