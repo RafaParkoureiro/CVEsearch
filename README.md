@@ -21,6 +21,10 @@ To run the code, follow these steps:
 
 pip install -r requirements.txt
 
+3. Generate a OPEN API key ( probably it will expire at the time of the presentation so you will need to generate one )
+
+3. Run the app.py code to open the fron-end part of the program, where you can search per specific CVE-ID to have some general informations about that CVE and then you can ask questions about it (for instance, you can ask "When was the attack?", or "What was the score of that CVE?".
+
 It's recommended to set up a new environment to ensure clean dependencies.
 
 ## Collaborators
