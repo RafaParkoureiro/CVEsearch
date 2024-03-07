@@ -4,7 +4,12 @@
 
 Welcome to the FCUP-HACKATHON2024-v3zados project repository!
 
-This project aims to leverage Language Model (LM) capabilities, particularly OpenAI's GPT-3.5 API, to enhance intelligence in handling Common Vulnerabilities and Exposures (CVEs). By utilizing data from the National Vulnerability Database (NVD), we've endeavored to develop interactive methods for extracting insights from CVEs. Our primary focus has been on employing AI to answer questions and provide deeper understanding regarding specific CVEs. Additionally, we explored the feasibility of predicting CVE vulnerability scores solely based on textual descriptions, using a logistic regression.
+This project aims to leverage Large Language Model (LLM) capabilities, particularly OpenAI's GPT-3.5 API, to enhance intelligence in handling Common Vulnerabilities and Exposures (CVEs).
+
+By utilizing data from the National Vulnerability Database (NVD), we've endeavored to develop interactive methods for extracting insights from CVEs:
+Our primary focus has been on employing AI to answer questions and provide deeper understanding regarding specific CVEs.
+The second thing was creating a dataset with ~10k entries to make a more advanced search using user input,(for example, you could the agent to show the CVEs within a daterange).
+Additionally, we explored the feasibility of predicting CVE vulnerability scores solely based on textual descriptions, using a logistic regression.
 
 ## Getting Started
 
