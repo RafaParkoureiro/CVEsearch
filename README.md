@@ -1,4 +1,4 @@
-# v3zados
+# FCUP-LIACD-HACKATHON2024-v3zados
 In order to run the code, you need to install the REQUIREMENTS.txt file in your environment, by typing in your terminal "pip install -r requirements.txt".
 It is recommended to use a new environment.
 
