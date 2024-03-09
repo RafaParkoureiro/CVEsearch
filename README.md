@@ -22,10 +22,12 @@ To run the code, follow these steps:
 pip install -r requirements.txt
 
 3. Generate a OPEN API key ( probably it will expire at the time of the presentation so you will need to generate one )
+(note that also the is a nvdlib related API code that you can use, or generate your own)
+
 
 3. Run the app.py code to open the fron-end part of the program, where you can search per specific CVE-ID to have some general informations about that CVE and then you can ask questions about it (for instance, you can ask "When was the attack?", or "What was the score of that CVE?".
 
-4. We did a model to classify the model but we couldn't implement in the front-end on time, but it's there :)
+4. We did a model to classify the CVE score but we couldn't implement in the front-end on time, but it's there :)
 
 It's recommended to set up a new environment to ensure clean dependencies.
 
